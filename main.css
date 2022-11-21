@@ -8,34 +8,107 @@ body{
 
 .container {
     width: 100vw;
-    background-color: #ccc;
+    background-color: blue;
     justify-content: center;
-    background-image: url(./assets/backrgound\ photo.jpg);
+    /* background-image: url(./assets/sunny-background.jpg);
     background-size: 100% 100% ;
-    background-position-y:bottom;
+    background-position-y:bottom; */
 /* background-attachment: fixed; */
 height: 100vh;
 }
 
-.row {
+.row-1, .row-2, .row-3, .row-4, .row-5, .row-6, .row-7, .row-8, .row-9, .row-10 {
     display: flex;
+}
+
+.row-1 > .brick {
+    width: 200px;
+    height:50px;
+    background-color: red;
+    border-radius: 5px;
+    margin:2px;
+     
+}
+.row-2 > .brick {
+    width: 200px;
+    height:50px;
+    background-color: orange;
+    border-radius: 5px;
+    margin:2px;
      
 }
 
-
-/* .brick{
+.row-3 > .brick {
     width: 200px;
     height:50px;
-    background-color: #bd585b;
+    background-color:green;
     border-radius: 5px;
     margin:2px;
-} */
+}
+
+.row-4 > .brick {
+    width: 200px;
+    height:50px;
+    background-color:yellow;
+    border-radius: 5px;
+    margin:2px;
+}
+
+.row-5 > .brick {
+    width: 200px;
+    height:50px;
+    background-color:coral;
+    border-radius: 5px;
+    margin:2px;
+}
+
+.row-6 > .brick {
+    width: 200px;
+    height:50px;
+    background-color:pink;
+    border-radius: 5px;
+    margin:2px;
+}
+
+.row-7 > .brick {
+    width: 200px;
+    height:50px;
+    background-color:purple;
+    border-radius: 5px;
+    margin:2px;
+}
+
+.row-8 > .brick {
+    width: 200px;
+    height:50px;
+    background-color:white;
+    border-radius: 5px;
+    margin:2px;
+}
+
+.row-9 > .brick {
+    width: 200px;
+    height:50px;
+    background-color:burlywood;
+    border-radius: 5px;
+    margin:2px;
+}
+
+.row-10 > .brick {
+    width: 200px;
+    height:50px;
+    background-color:silver;
+    border-radius: 5px;
+    margin:2px;
+}
+
+
 
 
 .UCB {
     width:200px;
     height:50px;
-    background-color:gray;
+    background-color:white;
     border-radius: 5px;
      /* position: relative;  */
     /* left: 800px;
@@ -44,7 +117,7 @@ height: 100vh;
 
 .ball {
     display: block;
-    background: black;
+    background: orangered;
     border-radius: 50%;
     height: 50px;
     width: 50px;
@@ -55,9 +128,30 @@ height: 100vh;
 }
 
 
+/* 
+.brick{
+    width: 200px;
+    height:50px;
+    background-color: #bd585b;
+    border-radius: 5px;
+    margin:2px;
+} */
 
 
- .brick-1{
+
+
+  /*code for other levels down below
+
+ /* .brick{
+    width:200px;
+    height:50px;
+    background-color:whitesmoke;
+    border-radius: 5px;
+    margin:2px;
+    
+} */
+
+ /* .brick-1{
     width:200px;
     height:50px;
     background-color:red;
@@ -152,5 +246,5 @@ height: 100vh;
     background-color:violet;
     border-radius: 5px;
     margin:2px;
-}
+} */
 

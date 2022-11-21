@@ -68,6 +68,19 @@ return {
 }
 }
 
+
+
+
+
+
+
+let UCB = document.querySelector('.UCB')
+move(UCB).withArrowKeys(800,300)
+let ball = document.querySelector('.ball')
+move(ball).to(875, 200)
+
+
+
 // let UCB = document.querySelector('.UCB')
 // let direction = null;
 // let x = 800;
@@ -115,16 +128,3 @@ return {
 // document.addEventListener('keyup', function(e){
 //     direction = null
 // })
-
-
-
-
-
-
-let UCB = document.querySelector('.UCB')
-move(UCB).withArrowKeys(800,300)
-
-let ball = document.querySelector('.ball')
-move(ball).to(875, 200)
-
-
