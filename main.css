@@ -10,7 +10,7 @@ body{
     width: 100vw;
     background-color: #ccc;
     justify-content: center;
-    background-image: url(./assets/McGruff_the_Crime_Dog.webp);
+    background-image: url(./assets/backrgound\ photo.jpg);
     background-size: 100% 100% ;
     background-position-y:bottom;
 /* background-attachment: fixed; */
@@ -23,17 +23,42 @@ height: 100vh;
 }
 
 
-.brick{
+/* .brick{
     width: 200px;
     height:50px;
     background-color: #bd585b;
     border-radius: 5px;
     margin:2px;
+} */
+
+
+.UCB {
+    width:200px;
+    height:50px;
+    background-color:gray;
+    border-radius: 5px;
+     /* position: relative;  */
+    /* left: 800px;
+    top: 300px;  */
 }
 
-/* code for next levels 
-/* .brick-1{
-    width:150px;
+.ball {
+    display: block;
+    background: black;
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    margin: 0;
+    /* position: relative;  */
+    /*left: 75px;
+    bottom: 50px; */
+}
+
+
+
+
+ .brick-1{
+    width:200px;
     height:50px;
     background-color:red;
     border-radius: 5px;
@@ -42,7 +67,7 @@ height: 100vh;
 }
 
 .brick-2{
-    width:150px;
+    width:200px;
     height:50px;
     background-color:orange;
     border-radius: 5px;
@@ -50,90 +75,82 @@ height: 100vh;
     
 }
 .brick-3{
-    width:150px;
+    width:200px;
     height:50px;
     background-color:yellow;
     border-radius: 5px;
     margin:2px;
     
 }
-.brick-3{
-    width:150px;
+.brick-4{
+    width:200px;
     height:50px;
     background-color:green;
     border-radius: 5px;
     margin:2px;
     
 }
-.brick-4{
-    width:150px;
+.brick-5{
+    width:200px;
     height:50px;
     background-color:blue;
     border-radius: 5px;
     margin:2px;
     
 }
-.brick-5{
-    width:150px;
+.brick-6{
+    width:200px;
     height:50px;
     background-color:indigo;
     border-radius: 5px;
     margin:2px;
     
 }
-.brick-6{
-    width:150px;
+.brick-7{
+    width:200px;
     height:50px;
     background-color:violet;
     border-radius: 5px;
     margin:2px;
     
 }
-.brick-7{
-    width:150px;
+.brick-8{
+    width:200px;
     height:50px;
     background-color:red;
     border-radius: 5px;
     margin:2px;
     
 }
-.brick-8{
-    width:150px;
+.brick-9{
+    width:200px;
     height:50px;
     background-color:yellow;
     border-radius: 5px;
     margin:2px;
     
 }
-.brick-9{
-    width:150px;
+.brick-10{
+    width:200px;
     height:50px;
     background-color:green;
     border-radius: 5px;
     margin:2px;
     
 }
-.brick-10{
-    width:150px;
+.brick-11{
+    width:200px;
     height:50px;
     background-color:blue;
     border-radius: 5px;
     margin:2px;
 }
 
-.brick-11{
-    width:150px;
+.brick-12{
+    width:200px;
     height:50px;
     background-color:violet;
     border-radius: 5px;
     margin:2px;
 }
 
-.brick-12{
-    width:150px;
-    height:50px;
-    background-color:orange;
-    border-radius: 5px;
-    margin:2px;
-    
-} */
