@@ -1,5 +1,5 @@
 function move (element) {
-    element.style.position = 'relative ';
+    element.style.position = 'relative';
 
     //function move defines a function in move
     function setCoordinates(left, top){
@@ -13,49 +13,46 @@ function move (element) {
         let y = top;
 
         element.style.left = x + 'px'
+        // only happens one time once intitilzied
         element.style.top = y + 'px'
 
         function moveUCB() {
             if(direction === 'west') {
+                if(x > 0) {
                 x = x - 1
+                }
             }
             
             if(direction === 'east') {
-                x = x + 1
+               
+                if(x < window.innerWidth - 200){
+                    x = x + 1
+                }
             }
-            
-            if(direction === 'north') {
-                y === y
-            }
-            
-            if(direction === 'south') {
-                y === y
-            }
-            
             
             element.style.left = x + 'px'
-            element.style.bottom = y + 'px'
+            //occurs multiple times when function is run
             
             }
 
             setInterval(moveUCB, 1)
 
-document.addEventListener('keydown', function(e){
-if (e.repeat) return ;
-//The keydown event fires multiple times as long as a user holds down a key. To make our logic simpler, we will use this line to skip any repeat events.
+        document.addEventListener('keydown', function(e){
+        if (e.repeat) return ;
+        //The keydown event fires multiple times as long as a user holds down a key. To make our logic simpler, we will use this line to skip any repeat events.
 
-if(e.key === 'ArrowLeft') {
-    direction = 'west'
-}
-if(e.key === 'ArrowRight') {
-    direction = 'east'
-}
+        if(e.key === 'ArrowLeft') {
+            direction = 'west'
+        }
+        if(e.key === 'ArrowRight') {
+            direction = 'east'
+        }
 
-})
+        })
 
-document.addEventListener('keyup', function(e){
-    direction = null
-})
+        document.addEventListener('keyup', function(e){
+            direction = null
+        })
 
     }
 return {
@@ -75,7 +72,7 @@ return {
 
 
 let UCB = document.querySelector('.UCB')
-move(UCB).withArrowKeys(800,300)
+move(UCB).withArrowKeys(800, 300)
 let ball = document.querySelector('.ball')
 move(ball).to(875, 200)
 
