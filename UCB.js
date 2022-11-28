@@ -65,16 +65,11 @@ return {
 }
 }
 
-
-
-
-
-
-
 let UCB = document.querySelector('.UCB')
 move(UCB).withArrowKeys(800, 300)
-let ball = document.querySelector('.ball')
-move(ball).to(875, 200)
+
+
+
 
 
 
