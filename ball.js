@@ -6,88 +6,64 @@ function Move(element) {
         element.style.bottom = bottom + 'px'
     }
 
-    function launchBall(left, bottom){
-    let direction = null;
-    let x = left;
-    let y = bottom;
-    
-    element.style.left = left + 'px'
-    element.style.bottom = bottom + 'px'
-
-
-    function moveBall(xDirection, yDirection) {
-        if(direction === 'north') {
-            if(y < window.innerHeight - 50) {
-              y = y + 1
-              if(y === window.innerHeight - 50) {
-                return direction = 'south'
-              }
-            }
-        }
-            
-            if(direction === 'south') {
-                 y = y - 1
-            }
-
-
-            if(direction === 'east') {
-                 if(x < window.innerWidth - 50){
-                    x = x + 1
-                    if(x === window.innerWidth - 50) {
-                        return direction = 'west'
-                    }
-                 }
-            }
-
-        if(direction === 'west') {
-           if(x > 0){
-            x = x - 1
-            if(x === 0) {
-                return direction = 'east'
-            }
-           }
-            
-        }
-        
-        
-        
-
-        
-        element.style.left = x + 'px'
-        element.style.bottom = y + 'px'
-        
-        }
-        setInterval(moveBall, 2)
-    
-        
-    
-        document.addEventListener('keydown', function(e){
-            if(e.key === 'ArrowUp') {
-                direction = 'north'
-            }
-        })
-    }
-
     return{
-        to: moveToCoords,
-        withArrowKeys: launchBall
+        to: moveToCoords
     }
     
     
 }
     
     
-  
+    
+let ball = document.querySelector('.ball')
+let direction = null;
+let x = 880
+let y = 120
+let dx = 2
+let dy = 2
 
 
-   
+function moveBall(){
+if(direction === 'north') {
+    if(y < window.innerHeight - 50) {
+      y = y + dy
+      if(y === window.innerHeight - 50) {
+        return direction = 'south'
+      }
+    }
+}
     
+    if(direction === 'south') {
+         y = y - dy
+    }
 
- 
+
+    if(direction === 'east') {
+         if(x < window.innerWidth - 50){
+            x = x + dx
+            if(x === window.innerWidth - 50) {
+                return direction = 'west'
+            }
+         }
+    }
+
+if(direction === 'west') {
+   if(x > 0){
+    x = x - dx
+    if(x === 0) {
+        return direction = 'east'
+    }
+   }
     
-    
-    let ball = document.querySelector('.ball')
-Move(ball).withArrowKeys(880,122)
+}
+ball.style.left = x + 'px'
+ball.style.bottom = y + 'px'
+
+}
+
+setInterval(moveBall, 2)
+
+Move(ball).to(880,120)
 
 //TODO
 //make function called launch ball which launches ball north when clicking top arrow key-done
