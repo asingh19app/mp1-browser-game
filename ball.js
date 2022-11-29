@@ -6,55 +6,52 @@ function Move(element) {
         element.style.bottom = bottom + 'px'
     }
 
+
     return{
-        to: moveToCoords
+        to: moveToCoords,
+     
     }
     
     
 }
     
-    
-    
-let ball = document.querySelector('.ball')
-let direction = null;
+      
+let direction = null
 let x = 880
-let y = 120
-let dx = 2
-let dy = 2
-
+let y = 122
 
 function moveBall(){
 if(direction === 'north') {
     if(y < window.innerHeight - 50) {
-      y = y + dy
+      y = y + 1
       if(y === window.innerHeight - 50) {
         return direction = 'south'
       }
     }
 }
-    
-    if(direction === 'south') {
-         y = y - dy
-    }
+
+if(direction === 'south') {
+    y = y - 1
+}
 
 
-    if(direction === 'east') {
-         if(x < window.innerWidth - 50){
-            x = x + dx
-            if(x === window.innerWidth - 50) {
-                return direction = 'west'
-            }
-         }
+if(direction === 'east') {
+    if(x < window.innerWidth - 50){
+       x = x + 1
+       if(x === window.innerWidth - 50) {
+           return direction = 'west'
+       }
     }
+}
 
 if(direction === 'west') {
-   if(x > 0){
-    x = x - dx
-    if(x === 0) {
-        return direction = 'east'
-    }
-   }
-    
+if(x > 0){
+x = x - 1
+if(x === 0) {
+   return direction = 'east'
+}
+}
+
 }
 ball.style.left = x + 'px'
 ball.style.bottom = y + 'px'
@@ -63,7 +60,9 @@ ball.style.bottom = y + 'px'
 
 setInterval(moveBall, 2)
 
-Move(ball).to(880,120)
+
+let ball = document.querySelector('.ball')
+Move(ball).to(880,122)
 
 //TODO
 //make function called launch ball which launches ball north when clicking top arrow key-done
