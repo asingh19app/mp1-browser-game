@@ -4,13 +4,13 @@
         <meta charset = "UTF-8">
         <meta name = "author" content ="Adeshvir Dhanoa">
         <meta name ="description" content = "I am making a brick smash game">
-        <link rel = "icon" href ="assets/brick.jpg" type = "image/x-icon">
+        <link rel = "icon" href ="./assets/redlogo.png" type = "image/x-icon">
         <link rel ="stylesheet" href ="main.css" type="text/css">
         <script defer src="UCB.js"></script>
         <script defer src="ball.js"></script>
-        <script defer src="hearts.js"></script>
+        <script defer src="ballLives.js"></script>
         <!-- Needed defer- bc tells script not to load, read top down, read meta info, still needs to buid DOM tree but hasnt reached it, so it looks for it immediately, so tells js to wait until html is down -->
-        <title>Brick Smash</title>
+        <title>Keep Up</title>
     </head>
 
 
@@ -169,12 +169,17 @@
    <div class="brick" id ="10-12"></div>
 </div>
 
+<div class="info"></div>
+
 <div class="UCB"></div>
 
 <div class="ball"></div>
 
-<div class="heart">
- <img src="./assets/finalheart.jpg" alt="heart">
+<h1 class = "caption">Balls Left:</h2>
+<div class="ballLives">
+   <div class="ballLife-1"></div>
+   <div class="ballLife-2"></div>
+   <div class="ballLife-3"></div>
 </div>
 
 </div>

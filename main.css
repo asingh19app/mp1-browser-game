@@ -18,10 +18,6 @@ height: 100vh;
 }
 
 
-
-
-
-
 .row-1, .row-2, .row-3, .row-4, .row-5, .row-6, .row-7, .row-8, .row-9, .row-10 {
     display: flex;
 }
@@ -29,7 +25,7 @@ height: 100vh;
 .row-1 > .brick {
     width: 200px;
     height:50px;
-    background-color: red;
+    background-color: blue;
     border-radius: 5px;
     margin:2px;
      
@@ -37,7 +33,7 @@ height: 100vh;
 .row-2 > .brick {
     width: 200px;
     height:50px;
-    background-color: orange;
+    background-color: blue;
     border-radius: 5px;
     margin:2px;
      
@@ -46,7 +42,7 @@ height: 100vh;
 .row-3 > .brick {
     width: 200px;
     height:50px;
-    background-color:green;
+    background-color:blue;
     border-radius: 5px;
     margin:2px;
 }
@@ -54,7 +50,7 @@ height: 100vh;
 .row-4 > .brick {
     width: 200px;
     height:50px;
-    background-color:yellow;
+    background-color:blue;
     border-radius: 5px;
     margin:2px;
 }
@@ -62,7 +58,7 @@ height: 100vh;
 .row-5 > .brick {
     width: 200px;
     height:50px;
-    background-color:coral;
+    background-color:blue;
     border-radius: 5px;
     margin:2px;
 }
@@ -70,7 +66,7 @@ height: 100vh;
 .row-6 > .brick {
     width: 200px;
     height:50px;
-    background-color:pink;
+    background-color:blue;
     border-radius: 5px;
     margin:2px;
 }
@@ -78,7 +74,7 @@ height: 100vh;
 .row-7 > .brick {
     width: 200px;
     height:50px;
-    background-color:purple;
+    background-color:blue;
     border-radius: 5px;
     margin:2px;
 }
@@ -86,7 +82,7 @@ height: 100vh;
 .row-8 > .brick {
     width: 200px;
     height:50px;
-    background-color:white;
+    background-color:blue;
     border-radius: 5px;
     margin:2px;
 }
@@ -94,7 +90,7 @@ height: 100vh;
 .row-9 > .brick {
     width: 200px;
     height:50px;
-    background-color:burlywood;
+    background-color:blue;
     border-radius: 5px;
     margin:2px;
 }
@@ -102,7 +98,7 @@ height: 100vh;
 .row-10 > .brick {
     width: 200px;
     height:50px;
-    background-color:silver;
+    background-color:blue;
     border-radius: 5px;
     margin:2px;
 }
@@ -133,6 +129,47 @@ height: 100vh;
 }
 
 
+h1{
+    color: antiquewhite;
+}
+
+
+.ballLives{
+    display: flex;
+}
+
+.ballLife-1{
+    display: block;
+    background: orangered;
+    border-radius: 50%;
+    height: 45px;
+    width: 45px;
+    margin: 0;
+}
+.ballLife-2{
+    display: block;
+    background: orangered;
+    border-radius: 50%;
+    height: 45px;
+    width: 45px;
+    margin: 0;
+}
+.ballLife-3{
+    display: block;
+    background: orangered;
+    border-radius: 50%;
+    height: 45px;
+    width: 45px;
+    margin: 0;
+}
+
+.info {
+    height: 0px;
+    overflow:visible;
+    text-align: center;
+    color: wheat;
+}
+/* forces div not to have size, but forces whats inside to showup
 /* 
 .brick{
     width: 200px;

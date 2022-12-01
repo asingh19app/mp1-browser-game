@@ -31,8 +31,13 @@ function Move(element) {
     //  setInterval(launchBall,1)
 
      document.addEventListener('keydown', function(e){
-        if(e.key === 'ArrowUp' && direction ===  null) {
+        if(e.key === 'ArrowUp' 
+        && direction ===  null
+        && numBalls.length > 0
+        //numBalls has three indexes and since we have that it is greater than zero, it will not launch once the length is not greater zero
+        ) {
             direction = 'northeast'
+            display('')
         }
         
      })
@@ -45,7 +50,7 @@ function Move(element) {
 
 let direction = null
 // x and y are the starting points of the ball
-let x = 880
+let x = UCB.offsetLeft + (UCB.offsetWidth/2) - 25
 let y = 122
 
 // initially we had straight cardinal angles, but now we have angular angles
@@ -54,6 +59,9 @@ let y = 122
 // If it hits the top, it will bounce to the southeast direction defined which is defined later on
 //if it hits the right side wall it will bounce northwest which is defined later on
 function moveBall(){
+  if(direction === null){
+    x = UCB.offsetLeft + (UCB.offsetWidth/2) - 25
+  }
 if(direction === 'northeast') {
     // if(y < window.innerHeight - 50) {
       y = y + 1
@@ -90,15 +98,21 @@ if(direction === 'northwest') {
 // so if ball is in the direction of southeast- y -1 and x + 1
 // if it past when the screen is 0 aka the bototm of the screen it will say you lose
 // if not we set the UCB and to make the ball bounce off the paddle 
-// paddle is confusing so chekc later
+// paddle is confusing so check later
 // if from southeast, if it hits the right side wall first, it will bounce southeast 
 if(direction === 'southeast') {
     y = y - 1
     x = x + 1
       if(y < -80) {
-        console.log('you lose!')
         direction = null
-        removeHeart()
+        x = UCB.offsetLeft + (UCB.offsetWidth/2)
+        //since we set the if statement for when direction === null, it will place the ball in the center of the paddle, so hen the ball passes below the paddle the the direction in set to null and it will automatically place the ball in the ceneter of the paddle
+        y = 122
+        removeBall()
+        uhOh()
+        endGame()
+       
+       
         //checks if goes past UCB, and if it hits UCB, then it hits UCB goes angle opposite, in bar level and width bounce off, and if hit right side wallit bounces to appro direction 
       }
       if(y == container.offsetHeight - UCB.offsetTop 
@@ -139,9 +153,13 @@ if(direction === 'southwest') {
     y = y - 1
     x = x - 1
     if(y < -80) {
-        console.log('you lose!')
         direction = null;
-        removeHeart()
+        //once direction wa snull before we could launch the ball from below the screen, now setting the points again we are able to put the ball in the dersired location and specifically launch it from there 
+        x = UCB.offsetLeft + (UCB.offsetWidth/2)
+        y = 122
+        removeBall()
+        uhOh()
+        endGame()
       }
  if(y == container.offsetHeight - UCB.offsetTop 
     // && y > container.offsetHeight - UCB.offsetTop - 50
@@ -180,3 +198,33 @@ Move(ball).withArrowKeys(880,122)
 // need to make welcome page with controls intro
 // need to make game over page if lives finished
 //need to make you won page 
+
+
+
+let infoPage = document.querySelector('.info')
+
+function display(message){
+infoPage.innerHTML = message 
+}
+
+
+
+display(
+ `<p>Try to keep the ball up within the three walls and paddle. Make sure it doesn't go under the paddle!</p>
+ <p>Press up arrow key to launch ball</p>
+  <p>Press left arrow to move paddle left </p>
+  <p>Press right arrow to move paddle right</p>`
+)
+
+
+function uhOh(){
+  if(numBalls.length === 2){
+   display('Uh-oh! If the ball goes under the paddle you lose a life.')
+  }
+}
+
+function endGame(){
+  if(numBalls.length === 0){
+    display('Game Over! Press the refresh button to start again.')
+  }
+}
