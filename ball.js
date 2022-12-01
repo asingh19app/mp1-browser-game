@@ -212,8 +212,8 @@ infoPage.innerHTML = message
 display(
  `<p>Try to keep the ball up within the three walls and paddle. Make sure it doesn't go under the paddle!</p>
  <p>Press up arrow key to launch ball</p>
-  <p>Press left arrow to move paddle left </p>
-  <p>Press right arrow to move paddle right</p>`
+  <p>Press left arrow key to move paddle left </p>
+  <p>Press right arrow key to move paddle right</p>`
 )
 
 
